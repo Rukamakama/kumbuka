@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toobarId"
+        layout="@layout/toobar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorBlue"
+        app:layout_constraintBottom_toBottomOf="@id/gdlMainView1"
+        app:layout_constraintTop_toBottomOf="@id/toobarId"
+        tools:layout_editor_absoluteX="135dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lytTips"
+            android:layout_width="@dimen/centCiquante"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/spnPrograms"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRadioName"
+                style="@style/textStyle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorRed"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDayHour"
+                style="@style/titleStyle1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cinquante"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintTop_toBottomOf="@+id/tvRadioName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                style="@style/textStyle2"
+                android:lineSpacingExtra="@dimen/dix"
+                android:background="@color/colorRed"
+                android:fontFamily="sans-serif-black"
+                app:layout_constraintTop_toBottomOf="@id/tvDayHour"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProgram"
+            style="@style/textStyle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strProgram"
+            app:layout_constraintBottom_toTopOf="@id/spnPrograms"
+            app:layout_constraintStart_toStartOf="@id/spnPrograms"/>
+
+        <Spinner
+            android:id="@+id/spnPrograms"
+            android:layout_width="@dimen/cent"
+            android:layout_height="@dimen/trente"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imgvRadio"
+            app:layout_constraintStart_toEndOf="@id/lytTips"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFrequence"
+            style="@style/titleStyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSizeExtra"
+            app:layout_constraintBottom_toTopOf="@id/imgvRadio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/spnPrograms"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgvRadio"
+            android:layout_width="@dimen/cent"
+            android:layout_height="@dimen/cinquante"
+            android:src="@drawable/ic_radio"
+            app:layout_constraintBottom_toTopOf="@id/btnLancerRadio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/spnPrograms"
+            app:layout_constraintTop_toBottomOf="@id/tvFrequence" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLancerRadio"
+            style="@style/buttonStyle2"
+            android:text="@string/strStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgvRadio"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlMainView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="@id/gdlMainView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gdlMainView1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lytDescription"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/deuxCentCinquante"
+        app:layout_constraintBottom_toTopOf="@id/tvReagit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPlus"
+        android:visibility="visible">
+
+        <!-- ******* Subject layout elements ********** -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lytMainSujet"
+            android:layout_width="@dimen/centCiquante"
+            android:layout_height="@dimen/cent"
+            android:background="@drawable/rounded_corner_green"
+            app:layout_constraintEnd_toStartOf="@id/lytMainPrensentateur"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/lytMainIntervenant">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSujet"
+                style="@style/titleStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strSujet"
+                app:layout_constraintBottom_toTopOf="@id/gdlSujet"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdlSujet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.30"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/deux"
+                app:layout_constraintTop_toTopOf="@id/gdlSujet"
+                android:src="@color/colorWhite"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSujetContent"
+                style="@style/textStyle2"
+                android:textSize="@dimen/textSizeSmall"
+                android:text="@string/sujet"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gdlSujet" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ******* Prensantent layout elements ********** -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lytMainPrensentateur"
+            android:layout_width="@dimen/centCiquante"
+            android:layout_height="@dimen/cent"
+            android:background="@drawable/rounded_corner_green"
+            app:layout_constraintStart_toEndOf="@id/lytMainSujet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/lytMainPartenaires">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPresentateur"
+                style="@style/titleStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strPresent"
+                app:layout_constraintBottom_toTopOf="@id/gdlPresent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdlPresent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.30"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/deux"
+                app:layout_constraintTop_toTopOf="@id/gdlPresent"
+                android:src="@color/colorWhite"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPresentContent"
+                style="@style/textStyle2"
+                android:textSize="@dimen/textSizeSmall"
+                android:text="@string/presentateur"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gdlPresent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ******* Intervenants layout elements ********** -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lytMainIntervenant"
+            android:layout_width="@dimen/centCiquante"
+            android:layout_height="@dimen/cent"
+            android:background="@drawable/rounded_corner_green"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lytMainPartenaires"
+            app:layout_constraintTop_toBottomOf="@id/lytMainSujet"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvintervenant"
+                style="@style/titleStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strinterv"
+                app:layout_constraintBottom_toTopOf="@id/gdlInterv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdlInterv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.30"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/deux"
+                app:layout_constraintTop_toTopOf="@id/gdlInterv"
+                android:src="@color/colorWhite"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvIntervContent"
+                style="@style/textStyle2"
+                android:textSize="@dimen/textSizeSmall"
+                android:text="@string/intervenant"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gdlInterv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lytMainPartenaires"
+            android:layout_width="@dimen/centCiquante"
+            android:layout_height="@dimen/cent"
+            android:background="@drawable/rounded_corner_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lytMainIntervenant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lytMainPrensentateur">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPartenaire"
+                style="@style/titleStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strParteners"
+                app:layout_constraintBottom_toTopOf="@id/gdlPartener"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdlPartener"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.30"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/deux"
+                app:layout_constraintTop_toTopOf="@id/gdlPartener"
+                android:src="@color/colorWhite"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPartenerContent"
+                style="@style/textStyle2"
+                android:textSize="@dimen/textSizeSmall"
+                android:text="@string/partenaire"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gdlPartener" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvReagit"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/trente"
+        style="@style/titleStyle2"
+        android:text="@string/strReact"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnGmail"
+        app:layout_constraintTop_toBottomOf="@id/lytDescription"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnSms"
+        style="@style/imgbStyle"
+        android:background="@color/colorWhite"
+        android:src="@mipmap/sms"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnWhatsapp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReagit" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnWhatsapp"
+        style="@style/imgbStyle"
+        android:background="@color/colorWhite"
+        android:src="@mipmap/whatsapp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnGmail"
+        app:layout_constraintStart_toEndOf="@id/btnSms"
+        app:layout_constraintTop_toBottomOf="@id/tvReagit" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnGmail"
+        style="@style/imgbStyle"
+        android:background="@color/colorWhite"
+        android:src="@mipmap/gmail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnFacebook"
+        app:layout_constraintStart_toEndOf="@id/btnWhatsapp"
+        app:layout_constraintTop_toBottomOf="@id/tvReagit" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnFacebook"
+        style="@style/imgbStyle"
+        android:background="@color/colorWhite"
+        android:src="@mipmap/facebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnGmail"
+        app:layout_constraintTop_toBottomOf="@id/tvReagit" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

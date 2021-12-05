@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/deuxCentCinquante"
+        android:background="@drawable/conversation"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/strEmisName"
+        android:layout_marginBottom="@dimen/vinght"
+        style="@style/titleStyle1"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/imgvTitle"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lytHomeCenter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/deuxCentCinquante"
+        android:layout_marginStart="@dimen/trente"
+        android:layout_marginEnd="@dimen/trente"
+        android:background="@drawable/rounded_coner_white"
+        app:layout_constraintBottom_toTopOf="@id/btnStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgvTitle">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApp"
+            style="@style/titleStyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strApp"
+            app:layout_constraintBottom_toTopOf="@id/tvKumbuka"
+            app:layout_constraintEnd_toStartOf="@id/imgvLogo"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvKumbuka"
+            style="@style/titleStyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@id/imgvLogo"
+            app:layout_constraintEnd_toStartOf="@id/imgvLogo"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgvLogo"
+            android:layout_width="@dimen/cent"
+            android:layout_height="@dimen/quatreVinght"
+            app:layout_constraintBottom_toTopOf="@id/gdlHomeCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvKumbuka"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/logo" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdlHomeCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/deux"
+            app:layout_constraintTop_toTopOf="@id/gdlHomeCenter"
+            android:src="@color/colorPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvIntro"
+            style="@style/textStyle1"
+            android:layout_width="@dimen/troisCents"
+            android:layout_height="@dimen/cent"
+            android:gravity="center"
+            android:text="@string/introText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gdlHomeCenter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStart"
+        android:text="@string/strStart"
+        style="@style/buttonStyle1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lytHomeCenter"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/centCiquante"
+        app:layout_constraintStart_toStartOf="@id/btnStart"
+        app:layout_constraintEnd_toEndOf="@id/btnStart"
+        app:layout_constraintTop_toTopOf="@id/btnStart"
+        app:layout_constraintBottom_toBottomOf="@id/btnStart"
+        android:src="@drawable/ic_launch"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

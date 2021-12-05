@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="deux">2dp</dimen>
+    <dimen name="cinq">5dp</dimen>
+    <dimen name="dix">10dp</dimen>
+    <dimen name="vinght">20dp</dimen>
+    <dimen name="trente">30dp</dimen>
+    <dimen name="quarante">40dp</dimen>
+    <dimen name="cinquante">50dp</dimen>
+    <dimen name="soixante">60dp</dimen>
+    <dimen name="quatreVinght">80dp</dimen>
+    <dimen name="cent">100dp</dimen>
+
+
+    <dimen name="centCiquante">150dp</dimen>
+    <dimen name="deuxCents">200dp</dimen>
+    <dimen name="deuxCentCinquante">250dp</dimen>
+    <dimen name="troisCents">300dp</dimen>
+
+
+    <!-- TextSize -->
+    <dimen name="textSizeSmall">14sp</dimen>
+    <dimen name="textSizeNormal">18sp</dimen>
+    <dimen name="textSizeBig">22sp</dimen>
+    <dimen name="textSizeExtra">26sp</dimen>
+
+</resources>

@@ -1,0 +1,85 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/inconsolata</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item><!-- Color for buttons background-->
+        <item name="colorError">@color/colorRed</item><!-- Color of errors-->
+        <item name="colorControlActivated">@color/colorBlue</item><!-- Color for activated controls-->
+        <item name="colorControlNormal">@color/colorGrey</item><!-- Color for normal controls-->
+    </style>
+    <style name="MyToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/colorWhite</item><!-- Color for toolbar title-->
+        <item name="android:textColorSecondary">@color/colorWhite</item><!-- Color for toolbar subs-->
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <!-- Le styles des text view -->
+    <style name="textStyle1" parent="AppTheme">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">@dimen/textSizeNormal</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="textStyle2" parent="textStyle1">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="titleStyle1" parent="textStyle1">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/textSizeBig</item>
+    </style>
+    <style name="titleStyle2" parent="titleStyle1">
+        <item name="android:textColor">@color/colorGrey</item>
+    </style>
+
+    <!-- Le style des bouttons -->
+    <style name="buttonStyle1" parent="AppTheme">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/trente</item>
+        <item name="android:layout_marginEnd">@dimen/trente</item>
+        <item name="android:textSize">@dimen/textSizeBig</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+    <style name="buttonStyle2" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/textSizeBig</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorBlue</item>
+        <item name="android:background">@color/colorBlue</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="buttonStyle3" parent="buttonStyle2">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/textSizeNormal</item>
+    </style>
+
+    <!-- Le style des edit Text -->
+    <style name="edtStyle" parent="textStyle1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/trente</item>
+        <item name="android:layout_marginEnd">@dimen/trente</item>
+    </style>
+
+    <!-- Le style de image view -->
+    <style name="imgbStyle" parent="AppTheme">
+        <item name="android:layout_width">@dimen/cinquante</item>
+        <item name="android:layout_height">@dimen/cinquante</item>
+    </style>
+
+</resources>

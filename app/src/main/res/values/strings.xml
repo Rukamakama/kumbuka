@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Kumbuka</string>
+    <string name="introText">
+        Bienvue dans l\'application de CORACON
+        qui vous permettra de suivre et de commenter
+        nos emmissions
+    </string>
+    <string name="strStart">Lancer</string>
+    <string name="strIdentif">Identification</string>
+    <string name="strProgramEmis">Programme de l\'émission</string>
+    <string name="strProgram">Programmes</string>
+    <string name="strEmissionEnCours">EMISSION EN COURS</string>
+    <string name="strNames">Noms*</string>
+    <string name="strSexe">Sexe</string>
+    <string name="strTel">Tél*</string>
+    <string name="strAge">Age</string>
+    <string name="strEmail">E-mail</string>
+    <string name="strAddress">Adresse*</string>
+    <string name="strSave">Enregistrer</string>
+    <string name="strHomme">Homme</string>
+    <string name="strFemme">Femme</string>
+    <string name="strPlus">Plus</string>
+    <string name="strReact">Reagissez s\'il vous plait !</string>
+    <string name="strEmisName">Kumbuka vipindi vya CORACON</string>
+    <string name="strApp">App</string>
+    <string name="strSujet">Sujet</string>
+    <string name="strinterv">Intervenants</string>
+    <string name="strParteners">Partenaires</string>
+    <string name="strPresent">Presentateur</string>
+    <string name="strEnvoyerSms">Envoyer des messages de rappel aux jeunes</string>
+    <string name="strNoRadio">Veillez installer une application radio</string>
+    <string name="strNoWht">Veillez installer whatsapp dans votre mobile</string>
+
+    <!-- Pour le choix de la tranche d'age-->
+    <string-array name="strArrayAges">
+        <item>@string/strAge</item>
+        <item>10 à 14</item>
+        <item>15 à 19</item>
+        <item>20 à 25</item>
+        <item>Plus de 25</item>
+    </string-array>
+
+    <string name="partenaire">OFDA, MercyCorps, CORACON, OXFAM</string>
+    <string name="presentateur">Michael Rukamaka</string>
+    <string name="intervenant">Chiza Matuguru, Alice Shalumo, Justin Lwambo</string>
+    <string name="sujet">L\'abtinence sexuel : la methode contraceptive par excelence</string>
+    <string name="strVoirPlus">Voir plus</string>
+
+</resources>

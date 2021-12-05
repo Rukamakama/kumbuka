@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- The toolbar setting -->
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/toobarId"
+        layout="@layout/toobar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--*******  Name input components setting  *********-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLytName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toobarId"
+        app:layout_constraintBottom_toTopOf="@id/radGSex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/deux">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNames"
+            style="@style/edtStyle"
+            android:hint="@string/strNames"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person"
+        android:layout_marginEnd="@dimen/quarante"
+        app:layout_constraintTop_toTopOf="@id/inputLytName"
+        app:layout_constraintBottom_toBottomOf="@id/inputLytName"
+        app:layout_constraintEnd_toEndOf="@id/inputLytName"/>
+
+    <!--*******  Sex radio button components setting  *********-->
+    <RadioGroup
+        android:id="@+id/radGSex"
+        app:layout_constraintBottom_toTopOf="@id/spnAge"
+        app:layout_constraintTop_toBottomOf="@id/inputLytName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/trente"
+        android:layout_marginStart="@dimen/trente"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radH"
+            style="@style/textStyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strHomme"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radF"
+            style="@style/textStyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/cent"
+            android:text="@string/strFemme"/>
+    </RadioGroup>
+
+    <!--*******  Age intervals spinner setting  *********-->
+    <Spinner
+        android:id="@+id/spnAge"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/trente"
+        android:layout_marginEnd="@dimen/trente"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/inputLytAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radGSex"/>
+
+    <!--*******  Address input components setting  *********-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLytAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/deux"
+        app:layout_constraintBottom_toTopOf="@id/inputLytTel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spnAge">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtAdress"
+            style="@style/edtStyle"
+            android:hint="@string/strAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_address"
+        android:layout_marginEnd="@dimen/quarante"
+        app:layout_constraintTop_toTopOf="@id/inputLytAddress"
+        app:layout_constraintBottom_toBottomOf="@id/inputLytAddress"
+        app:layout_constraintEnd_toEndOf="@id/inputLytAddress"/>
+
+    <!--*******  Telephone input components setting  *********-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLytTel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/inputLytAddress"
+        app:layout_constraintBottom_toTopOf="@id/inputLytEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/deux">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtTel"
+            style="@style/edtStyle"
+            android:hint="@string/strTel"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_tel"
+        android:layout_marginEnd="@dimen/quarante"
+        app:layout_constraintTop_toTopOf="@id/inputLytTel"
+        app:layout_constraintBottom_toBottomOf="@id/inputLytTel"
+        app:layout_constraintEnd_toEndOf="@id/inputLytTel"/>
+
+    <!--*******  Email input components setting  *********-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLytEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/inputLytTel"
+        app:layout_constraintBottom_toTopOf="@id/btnEnregistrer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/deux">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtEmail"
+        style="@style/edtStyle"
+        android:hint="@string/strEmail"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_mail"
+        android:layout_marginEnd="@dimen/quarante"
+        app:layout_constraintTop_toTopOf="@id/inputLytEmail"
+        app:layout_constraintBottom_toBottomOf="@id/inputLytEmail"
+        app:layout_constraintEnd_toEndOf="@id/inputLytEmail"/>
+
+    <!--*******  Button save components setting  *********-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEnregistrer"
+        android:text="@string/strSave"
+        style="@style/buttonStyle1"
+        app:layout_constraintTop_toBottomOf="@id/inputLytEmail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/centCiquante"
+        app:layout_constraintTop_toTopOf="@id/btnEnregistrer"
+        app:layout_constraintBottom_toBottomOf="@id/btnEnregistrer"
+        app:layout_constraintEnd_toEndOf="@id/btnEnregistrer"
+        app:layout_constraintStart_toStartOf="@id/btnEnregistrer"
+        android:src="@drawable/ic_save"
+        android:elevation="@dimen/deux"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
